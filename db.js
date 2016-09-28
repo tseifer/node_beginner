@@ -16,20 +16,24 @@ function init() {
 }
 
 function createDemoContacts(cb) {
-    let contact = new Contact({id: 1, name: 'Tidhar Seifer', tel: '0544523238'});
-    contact.save(cb);
+    addContact({name: 'Tidhar Seifer', tel: '0544523238'}, cb);
+
 }
 
 function getContacts(cb) {
     Contact.find({}, cb);
 }
 
+function addContact(params, cb) {
+    let contact = new Contact({name: params.name, tel: params.tel});
+    contact.save(cb);
 
+}
 module.exports = {
     'init': init,
     'createDemoContacts': createDemoContacts,
-    'getContacts': getContacts
-
+    'getContacts': getContacts,
+    'addContact': addContact
 
 };
 

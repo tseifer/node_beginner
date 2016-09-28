@@ -31,7 +31,16 @@ app.get('/createDemoContacts', function(req, res) {
         res.send({error: err, result: contact});
     });
 });
+app.get('/addContact', function(req, res) {
+    var params = req.query;
 
+
+
+    //res.send(params);
+    db.addContact(params, function(err, contact) {
+        res.send({error: err, result: contact});
+    });
+});
 
 function onListening() {
     var addr = server.address();
