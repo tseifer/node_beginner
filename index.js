@@ -7,7 +7,7 @@ let contacts = require('./mock-contacts');
 server.on('listening', onListening);
 
 
-server.listen(8080);
+server.listen(process.env.PORT || 3000);
 
 db.init();
 
