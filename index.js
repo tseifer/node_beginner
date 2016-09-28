@@ -4,6 +4,9 @@ var http = require('http');
 var server = http.createServer(app);
 var db = require('./db');
 var contacts = require('./mock-contacts');
+var cors = require('cors');
+
+app.use(cors);
 
 server.on('listening', onListening);
 
