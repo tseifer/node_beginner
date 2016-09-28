@@ -1,8 +1,9 @@
-let app = require('express')();
-let http = require('http');
-let server = http.createServer(app);
-let db = require('./db');
-let contacts = require('./mock-contacts');
+'use strict'
+var app = require('express')();
+var http = require('http');
+var server = http.createServer(app);
+var db = require('./db');
+var contacts = require('./mock-contacts');
 
 server.on('listening', onListening);
 
