@@ -6,7 +6,7 @@ var db = require('./db');
 var contacts = require('./mock-contacts');
 var cors = require('cors');
 
-app.use(cors);
+app.use(cors());
 
 server.on('listening', onListening);
 
