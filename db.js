@@ -1,6 +1,7 @@
 /**
  * Created by Tidhar on 21/9/2016.
  */
+'use strict'
 var mongoose = require('mongoose');
 
 var Contact = mongoose.model('Contact', {id: Number, name: String, tel: String});
